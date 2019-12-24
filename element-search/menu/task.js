@@ -1,6 +1,6 @@
 const menuLink = document.querySelectorAll('.menu__link');
 
-for (let link of Array.from(links)) {
+for (let link of Array.from(menuLink)) {
     link.onclick = function () {
 
         const element = link.parentElement;
