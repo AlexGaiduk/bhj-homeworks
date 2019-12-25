@@ -7,11 +7,8 @@ const modalBtn = document.querySelector('.show-success');
 
 const success = document.querySelector('#modal_success');
 
-modalClose[0].onclick = function () {
-    modalPopups.className = 'modal';
-};
-
 modalBtn.onclick = function () {
+    modalPopups.className = 'modal';
     success.className = 'modal modal_active';
 };
 
