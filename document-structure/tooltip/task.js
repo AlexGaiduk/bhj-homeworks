@@ -11,10 +11,10 @@ tooltip.addEventListener('click', () => tooltip.classList.remove('tooltip_active
 function showHint(event) {
     event.preventDefault();
 
-    const tooltip = document.querySelector('.tooltip_active');
+    const tooltipActive = document.querySelector('.tooltip_active');
 
-    if (tooltip) {
-        tooltip.classList.remove('tooltip_active');
+    if (tooltipActive) {
+        tooltipActive.classList.remove('tooltip_active');
     }
 
     tooltip.classList.add('tooltip_active');
@@ -22,3 +22,4 @@ function showHint(event) {
     tooltip.style.left = event.target.getBoundingClientRect().left + 'px';
     tooltip.style.top = event.target.getBoundingClientRect().top + 20 + 'px';
 }
+
