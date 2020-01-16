@@ -17,6 +17,8 @@ const dec = product.querySelector('.product__quantity-control_dec');
       : +countProd.textContent - 1;
   });
 
+});
+
 for (let item of adds) {
     item.addEventListener('click', addCart);
 }
@@ -24,12 +26,12 @@ for (let item of adds) {
 function addCart(event) {
     const prod = event.target.closest('.product');
     const id = prod.dataset.id;
-    const countFromProduct = event.target.parentNode.querySelector('.product__quantity-value').innerText;
+    const countFromProduct = + event.target.parentNode.querySelector('.product__quantity-value').innerText;
 
     for (let item of cart.children) {
         if (item.dataset.id === id) {
             let productCount = item.querySelector('.cart__product-count');
-            let total = productCount.innerText;
+            let total = + productCount.innerText;
             productCount.innerText = total + countFromProduct;
 
             return false;
@@ -46,5 +48,5 @@ function addCart(event) {
     cart.insertAdjacentHTML('beforeend', prodToCart);
 }
 
-});
+
 
