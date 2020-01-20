@@ -15,6 +15,7 @@ function showHint(event) {
 
     if (tooltipActive) {
         tooltipActive.classList.remove('tooltip_active');
+        return
     }
 
     tooltip.classList.add('tooltip_active');
@@ -22,3 +23,4 @@ function showHint(event) {
     tooltip.style.left = event.target.getBoundingClientRect().left + 'px';
     tooltip.style.top = event.target.getBoundingClientRect().top + 20 + 'px';
 }
+
