@@ -22,4 +22,3 @@ function showHint(event) {
     tooltip.style.left = event.target.getBoundingClientRect().left + 'px';
     tooltip.style.top = event.target.getBoundingClientRect().top + 20 + 'px';
 }
-

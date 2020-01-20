@@ -70,5 +70,4 @@ function init() {
         canBeDeleted();
     }
 }
-localStorage.clear()
 init();
